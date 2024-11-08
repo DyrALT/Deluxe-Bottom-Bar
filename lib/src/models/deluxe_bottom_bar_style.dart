@@ -8,7 +8,7 @@ class DeluxeBottomBarStyle {
   /// Creates a DeluxeBottomBarStyle with optional background color.
   ///
   /// [backgroundColor] sets the background color of the entire bottom bar.
-  ///   
+  ///
   /// [bottomPadding] sets the padding at the bottom of the bottom bar.
   const DeluxeBottomBarStyle({
     this.backgroundColor,

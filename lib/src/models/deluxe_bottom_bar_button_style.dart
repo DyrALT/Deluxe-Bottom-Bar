@@ -11,7 +11,7 @@ class DeluxeBottomBarButtonStyle {
   /// selected button. [selectedButtonIconColor] sets the icon color for
   /// the selected button. [iconColor] sets the icon color for unselected
   /// buttons.
-  ///   
+  ///
   /// [iconSize] sets the size of the icon in the button.
   /// Defaults to 20.
   const DeluxeBottomBarButtonStyle({
