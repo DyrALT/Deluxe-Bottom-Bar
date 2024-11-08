@@ -12,9 +12,11 @@ class _ActionButton extends StatelessWidget {
   /// [backgroundColor] sets the button's background color.
   /// [iconColor] changes the color of the add icon.
   /// [iconSize] adjusts the size of the add icon.
+  /// [icon] specifies the icon displayed in the action button.
   const _ActionButton({
+    required this.iconSize,
+    required this.icon,
     this.onActionButtonTapped,
-    this.iconSize,
     this.backgroundColor,
     this.iconColor,
   });
@@ -38,7 +40,12 @@ class _ActionButton extends StatelessWidget {
   /// The size of the icon displayed in the action button.
   ///
   /// If not provided, the icon will default to a standard size.
-  final double? iconSize;
+  final double iconSize;
+
+  /// The icon displayed in the action button.
+  ///   
+  /// If not provided, the icon will default to the add icon.
+  final IconData icon;
 
   @override
   Widget build(BuildContext context) {
@@ -49,7 +56,7 @@ class _ActionButton extends StatelessWidget {
         elevation: 0,
         backgroundColor: backgroundColor,
         child: Icon(
-          Icons.add,
+          icon,
           color: iconColor ?? Colors.white,
           size: iconSize,
         ),

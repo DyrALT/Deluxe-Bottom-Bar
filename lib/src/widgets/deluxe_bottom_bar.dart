@@ -197,6 +197,7 @@ class _DeluxeBottomBarState extends State<DeluxeBottomBar> {
             onActionButtonTapped: widget.onActionButtonTapped,
             backgroundColor: widget.actionButtonStyle.backgroundColor,
             iconColor: widget.actionButtonStyle.iconColor,
+            icon: widget.actionButtonStyle.icon,
             iconSize: widget.buttonStyle.iconSize,
           ),
         ],

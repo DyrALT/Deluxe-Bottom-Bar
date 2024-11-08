@@ -10,9 +10,11 @@ class DeluxeBottomBarActionButtonStyle {
   ///
   /// [backgroundColor] defines the button's background color.
   /// [iconColor] defines the color of the button's icon.
+  /// [icon] sets the icon displayed in the action button.
   const DeluxeBottomBarActionButtonStyle({
     this.backgroundColor,
     this.iconColor,
+    this.icon = Icons.add,
   });
 
   /// The background color of the action button.
@@ -24,4 +26,9 @@ class DeluxeBottomBarActionButtonStyle {
   ///
   /// If null, the icon color will default to a standard value.
   final Color? iconColor;
+
+  /// The icon displayed in the action button.
+  ///
+  /// If not provided, the icon will default to the add icon.
+  final IconData icon;
 }
