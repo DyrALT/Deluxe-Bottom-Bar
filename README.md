@@ -15,10 +15,7 @@ To use this package, add `deluxe_bottom_bar` as a dependency in your `pubspec.ya
 
 ```yaml
 dependencies:
-  deluxe_bottom_bar: 
-    git:
-      url: git://github.com/DyrALT/Deluxe-Bottom-Bar.git
-      ref: master
+  deluxe_bottom_bar: ^1.0.0
 ```
 
 ## Usage
