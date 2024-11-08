@@ -43,7 +43,7 @@ class _ActionButton extends StatelessWidget {
   final double iconSize;
 
   /// The icon displayed in the action button.
-  ///   
+  ///
   /// If not provided, the icon will default to the add icon.
   final IconData icon;
 
