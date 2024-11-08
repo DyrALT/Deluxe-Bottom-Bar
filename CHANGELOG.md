@@ -7,3 +7,7 @@
 ## 1.0.1
 
 * code formatting.
+
+## 1.0.2
+
+* fix analysis issues.
