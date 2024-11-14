@@ -1,5 +1,7 @@
 # Deluxe Bottom Bar
 
+[![pub package](https://img.shields.io/pub/v/deluxe_bottom_bar.svg)](https://pub.dev/packages/deluxe_bottom_bar)
+
 Deluxe Bottom Bar is a Flutter package that provides a customizable bottom navigation bar for your Flutter applications.
 
 ## Features
