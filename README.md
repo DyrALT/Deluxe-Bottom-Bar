@@ -17,7 +17,7 @@ To use this package, add `deluxe_bottom_bar` as a dependency in your `pubspec.ya
 
 ```yaml
 dependencies:
-  deluxe_bottom_bar: ^1.0.0
+  deluxe_bottom_bar: any
 ```
 
 ## Usage
@@ -64,7 +64,11 @@ class MyApp extends StatelessWidget {
 
 ## Example
 
-you can find the example in the [Example](EXAMPLE) folder.
+you can find the example in the [Example](/example) folder.
+
+## Contributing
+
+Contributions are welcome! If you'd like to contribute, please fork the repository and submit a pull request.
 
 ## License
 

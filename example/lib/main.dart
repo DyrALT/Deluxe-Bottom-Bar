@@ -66,17 +66,20 @@ class _MyHomePageState extends State<MyHomePage> {
           debugPrint('Action button tapped');
         },
         buttonStyle: const DeluxeBottomBarButtonStyle(
-          iconSize: 20,
-          selectedButtonBackgroundColor: Colors.blue,
+          iconSize: 26,
+          selectedButtonBackgroundColor: Colors.lightBlueAccent,
+          iconColor: Colors.black,
+          selectedButtonIconColor: Colors.white,
         ),
         defaultIndex: 1,
         style: const DeluxeBottomBarStyle(
           backgroundColor: Color.fromARGB(255, 219, 219, 219),
+          bottomPadding: 25,
         ),
         actionButtonStyle: const DeluxeBottomBarActionButtonStyle(
-          backgroundColor: Colors.blue,
-          iconColor: Colors.white,
-        ),
+            backgroundColor: Colors.blue,
+            iconColor: Colors.white,
+            icon: Icons.takeout_dining),
         items: const [
           DeluxeBottomBarItem(
             icon: Icons.home,

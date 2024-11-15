@@ -1,4 +1,4 @@
-part of 'deluxe_bottom_bar.dart';
+part of '../deluxe_bottom_bar.dart';
 
 /// A central action button widget designed for the DeluxeBottomBar.
 ///

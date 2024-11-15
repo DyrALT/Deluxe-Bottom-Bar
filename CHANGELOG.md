@@ -11,3 +11,9 @@
 ## 1.0.2
 
 * fix analysis issues.
+
+## 1.0.3
+
+* Improved code readability and modularity in `_DeluxeBottomBarState`.
+
+* Optimized widget rebuilding for better performance.

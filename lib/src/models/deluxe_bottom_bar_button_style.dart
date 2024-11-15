@@ -16,8 +16,8 @@ class DeluxeBottomBarButtonStyle {
   /// Defaults to 20.
   const DeluxeBottomBarButtonStyle({
     this.selectedButtonBackgroundColor,
-    this.selectedButtonIconColor,
-    this.iconColor,
+    this.selectedButtonIconColor = Colors.white,
+    this.iconColor = Colors.black,
     this.iconSize = 20,
   });
 
@@ -29,12 +29,12 @@ class DeluxeBottomBarButtonStyle {
   /// The color of the icon displayed in the selected button.
   ///
   /// If null, this will default to a contrasting color for visibility.
-  final Color? selectedButtonIconColor;
+  final Color selectedButtonIconColor;
 
   /// The icon color for unselected buttons.
   ///
   /// If not specified, this defaults to black.
-  final Color? iconColor;
+  final Color iconColor;
 
   /// The size of the icon in the button.
   final double iconSize;
