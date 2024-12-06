@@ -29,3 +29,7 @@
 * refactor icon handling to use widgets
 
 * enhance DeluxeBottomBar styles
+
+## 1.1.1
+
+* readme file update

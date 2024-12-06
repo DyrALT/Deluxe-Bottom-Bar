@@ -33,47 +33,77 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    final PageController pageController = PageController();
+
     return MaterialApp(
       home: Scaffold(
-      bottomNavigationBar: DeluxeBottomBar(
-        pageController: pageController,
-        style: const DeluxeBottomBarStyle(
-          backgroundColor: Colors.white,
-          boxShadow: [
-            BoxShadow(
-              color: Color.fromRGBO(171, 171, 171, .7),
-              blurRadius: 10,
-              offset: Offset(0, 5),
+        appBar: AppBar(
+          title: const Text('Deluxe Bottom Bar Example'),
+        ),
+        body: PageView(
+          controller: pageController,
+          children: const [
+            Center(child: Text('Home Page')),
+            Center(child: Text('Search Page')),
+            Center(child: Text('Flutter Page')),
+            Center(child: Text('Settings Page')),
+          ],
+        ),
+        bottomNavigationBar: DeluxeBottomBar(
+          pageController: pageController,
+          style: const DeluxeBottomBarStyle(
+            backgroundColor: Colors.white,
+            boxShadow: [
+              BoxShadow(
+                color: Color.fromRGBO(171, 171, 171, .7),
+                blurRadius: 10,
+                offset: Offset(0, 5),
+              ),
+            ],
+          ),
+          buttonStyle: const DeluxeBottomBarButtonStyle(
+            selectedButtonBackgroundColor: Color(0xff0ebe7e),
+            iconSize: 22,
+            selectedButtonIconColor: Colors.white,
+          ),
+          actionButtonStyle: const DeluxeBottomBarActionButtonStyle(
+            backgroundColor: Color(0xff0ebe7e),
+            widget: Icon(
+              Icons.accessibility_new_rounded,
+              color: Colors.white,
+            ),
+          ),
+          items: const [
+            DeluxeBottomBarItem(
+              icon: Icon(
+                Icons.home_outlined,
+              ),
+            ),
+            DeluxeBottomBarItem(
+              icon: Icon(
+                Icons.search_outlined,
+              ),
+              tooltip: 'Search',
+            ),
+            DeluxeBottomBarItem(
+              icon: FlutterLogo(
+                size: 20,
+              ),
+              tooltip: 'Flutter',
+            ),
+            DeluxeBottomBarItem(
+              icon: Icon(
+                Icons.settings_outlined,
+              ),
+              tooltip: 'Settings',
             ),
           ],
         ),
-        buttonStyle: const DeluxeBottomBarButtonStyle(
-          selectedButtonBackgroundColor: Color(0xff0ebe7e),
-        ),
-        actionButtonStyle: const DeluxeBottomBarActionButtonStyle(
-          backgroundColor: Color(0xff0ebe7e),
-          icon: Icons.accessibility_new_rounded,
-        ),
-        items: const [
-          DeluxeBottomBarItem(
-            icon: Icons.home_outlined,
-            tooltip: 'Home',
-          ),
-          DeluxeBottomBarItem(
-            icon: Icons.search_outlined,
-            tooltip: 'Search',
-          ),
-          DeluxeBottomBarItem(
-            icon: Icons.settings_outlined,
-            tooltip: 'Settings',
-          ),
-        ],
-      ),
-        body: Center(child: Text('Hello, world!')),
       ),
     );
   }
 }
+
 ```
 
 ## Example

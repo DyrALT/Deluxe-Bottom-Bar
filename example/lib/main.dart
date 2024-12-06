@@ -72,7 +72,7 @@ class _MyHomePageState extends State<MyHomePage> {
         buttonStyle: const DeluxeBottomBarButtonStyle(
           selectedButtonBackgroundColor: Color(0xff0ebe7e),
           iconSize: 22,
-          iconColor: Colors.blue,
+          // iconColor: Colors.blue,
           selectedButtonIconColor: Colors.white,
         ),
         actionButtonStyle: const DeluxeBottomBarActionButtonStyle(
@@ -89,16 +89,16 @@ class _MyHomePageState extends State<MyHomePage> {
             ),
           ),
           DeluxeBottomBarItem(
-            icon: FlutterLogo(
-              size: 20,
+            icon: Icon(
+              Icons.search_outlined,
             ),
             tooltip: 'Search',
           ),
           DeluxeBottomBarItem(
-            icon: Icon(
-              Icons.settings_outlined,
+            icon: FlutterLogo(
+              size: 20,
             ),
-            tooltip: 'Settings',
+            tooltip: 'Flutter',
           ),
           DeluxeBottomBarItem(
             icon: Icon(
@@ -113,9 +113,8 @@ class _MyHomePageState extends State<MyHomePage> {
         children: const [
           Center(child: Text('Home')),
           Center(child: Text('Search')),
-          Center(child: Text('Notifications')),
+          Center(child: Text('Flutter')),
           Center(child: Text('Settings')),
-          // Center(child: Text('Notifications')),
         ],
       ),
     );
