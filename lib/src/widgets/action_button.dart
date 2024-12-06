@@ -13,12 +13,14 @@ class _ActionButton extends StatelessWidget {
   /// [iconColor] changes the color of the add icon.
   /// [iconSize] adjusts the size of the add icon.
   /// [icon] specifies the icon displayed in the action button.
+  /// [boxShadow] applies a shadow effect to the action button.
   const _ActionButton({
     required this.iconSize,
     required this.icon,
     this.onActionButtonTapped,
     this.backgroundColor,
     this.iconColor,
+    this.boxShadow,
   });
 
   /// Callback function triggered when the action button is pressed.
@@ -47,18 +49,26 @@ class _ActionButton extends StatelessWidget {
   /// If not provided, the icon will default to the add icon.
   final IconData icon;
 
+  /// The shadow effect applied to the action button.
+  final List<BoxShadow>? boxShadow;
+
   @override
   Widget build(BuildContext context) {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 15),
-      child: FloatingActionButton(
-        onPressed: () => onActionButtonTapped?.call(),
-        elevation: 0,
-        backgroundColor: backgroundColor,
-        child: Icon(
-          icon,
-          color: iconColor ?? Colors.white,
-          size: iconSize,
+      child: Container(
+        decoration: BoxDecoration(
+          boxShadow: boxShadow,
+        ),
+        child: FloatingActionButton(
+          onPressed: () => onActionButtonTapped?.call(),
+          elevation: 0,
+          backgroundColor: backgroundColor,
+          child: Icon(
+            icon,
+            color: iconColor ?? Colors.white,
+            size: iconSize,
+          ),
         ),
       ),
     );

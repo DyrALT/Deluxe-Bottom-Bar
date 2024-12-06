@@ -95,7 +95,11 @@ class _DeluxeBottomBarState extends State<DeluxeBottomBar>
         mainAxisAlignment: MainAxisAlignment.end,
         children: [
           Expanded(
-            child: _deluxeBottomBarContainer(context, backgroundColor),
+            child: _deluxeBottomBarContainer(
+              context,
+              backgroundColor: backgroundColor,
+              boxShadow: widget.style.boxShadow,
+            ),
           ),
           // Central action button for triggering custom actions.
           _ActionButton(
@@ -104,6 +108,7 @@ class _DeluxeBottomBarState extends State<DeluxeBottomBar>
             iconColor: widget.actionButtonStyle.iconColor,
             icon: widget.actionButtonStyle.icon,
             iconSize: widget.buttonStyle.iconSize,
+            boxShadow: widget.style.boxShadow,
           ),
         ],
       ),
@@ -115,9 +120,10 @@ class _DeluxeBottomBarState extends State<DeluxeBottomBar>
   /// The container includes padding, a background color, and a row of buttons.
   /// Each button is styled based on its selection state.
   Container _deluxeBottomBarContainer(
-    BuildContext context,
-    Color backgroundColor,
-  ) {
+    BuildContext context, {
+    required Color backgroundColor,
+    List<BoxShadow>? boxShadow,
+  }) {
     return Container(
       margin: EdgeInsets.only(
         left: MediaQuery.of(context).size.width * 0.025,
@@ -126,6 +132,7 @@ class _DeluxeBottomBarState extends State<DeluxeBottomBar>
       decoration: BoxDecoration(
         color: backgroundColor,
         borderRadius: BorderRadius.circular(40),
+        boxShadow: boxShadow,
       ),
       child: ValueListenableBuilder(
         valueListenable: _selectedIndexNotifier,

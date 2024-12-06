@@ -31,4 +31,6 @@ class DeluxeBottomBarActionButtonStyle {
   ///
   /// If not provided, the icon will default to the add icon.
   final IconData icon;
+
+
 }

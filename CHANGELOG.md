@@ -17,3 +17,9 @@
 * Improved code readability and modularity in `_DeluxeBottomBarState`.
 
 * Optimized widget rebuilding for better performance.
+
+## 1.0.4
+
+* improve DeluxeBottomBar styles with box shadow effects
+
+* fix tooltop issue

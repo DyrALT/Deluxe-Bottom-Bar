@@ -45,23 +45,29 @@ class _DeluxeBottomBarItemButton extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Flexible(
-      child: Tooltip(
-        // Displays the tooltip message when the user long-presses the button.
-        message: tooltip,
-        child: OutlinedButton(
-          onPressed: onItemTapped,
-          style: OutlinedButton.styleFrom(
-            side: BorderSide(
-              color: backgroundColor,
-            ),
-            backgroundColor: backgroundColor,
-          ),
-          child: Icon(
-            icon,
-            size: iconSize,
-            color: iconColor,
-          ),
+      child: tooltip != null
+          ? Tooltip(
+              message: tooltip,
+              child: buildButton(),
+            )
+          : buildButton(),
+    );
+  }
+
+  /// Builds the button widget.
+  OutlinedButton buildButton() {
+    return OutlinedButton(
+      onPressed: onItemTapped,
+      style: OutlinedButton.styleFrom(
+        side: BorderSide(
+          color: backgroundColor,
         ),
+        backgroundColor: backgroundColor,
+      ),
+      child: Icon(
+        icon,
+        size: iconSize,
+        color: iconColor,
       ),
     );
   }

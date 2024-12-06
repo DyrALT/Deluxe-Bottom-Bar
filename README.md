@@ -6,8 +6,8 @@ Deluxe Bottom Bar is a Flutter package that provides a customizable bottom navig
 
 ## Features
 
-- Customizable icons and labels
-- Easy to integrate
+* Customizable icons and labels
+* Easy to integrate
 
 ![Demo GIF](./assets/demo.gif)
 
@@ -35,22 +35,36 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     return MaterialApp(
       home: Scaffold(
-        bottomNavigationBar: DeluxeBottomBar(
+      bottomNavigationBar: DeluxeBottomBar(
+        pageController: pageController,
+        style: const DeluxeBottomBarStyle(
+          backgroundColor: Colors.white,
+          boxShadow: [
+            BoxShadow(
+              color: Color.fromRGBO(171, 171, 171, .7),
+              blurRadius: 10,
+              offset: Offset(0, 5),
+            ),
+          ],
+        ),
+        buttonStyle: const DeluxeBottomBarButtonStyle(
+          selectedButtonBackgroundColor: Color(0xff0ebe7e),
+        ),
+        actionButtonStyle: const DeluxeBottomBarActionButtonStyle(
+          backgroundColor: Color(0xff0ebe7e),
+          icon: Icons.accessibility_new_rounded,
+        ),
         items: const [
           DeluxeBottomBarItem(
-            icon: Icons.home,
+            icon: Icons.home_outlined,
             tooltip: 'Home',
           ),
           DeluxeBottomBarItem(
-            icon: Icons.search,
+            icon: Icons.search_outlined,
             tooltip: 'Search',
           ),
           DeluxeBottomBarItem(
-            icon: Icons.notifications,
-            tooltip: 'Notifications',
-          ),
-          DeluxeBottomBarItem(
-            icon: Icons.settings,
+            icon: Icons.settings_outlined,
             tooltip: 'Settings',
           ),
         ],

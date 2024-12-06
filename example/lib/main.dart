@@ -59,42 +59,33 @@ class _MyHomePageState extends State<MyHomePage> {
       ),
       bottomNavigationBar: DeluxeBottomBar(
         pageController: pageController,
-        onPageChanged: (index) {
-          debugPrint(index.toString());
-        },
-        onActionButtonTapped: () {
-          debugPrint('Action button tapped');
-        },
-        buttonStyle: const DeluxeBottomBarButtonStyle(
-          iconSize: 26,
-          selectedButtonBackgroundColor: Colors.lightBlueAccent,
-          iconColor: Colors.black,
-          selectedButtonIconColor: Colors.white,
-        ),
-        defaultIndex: 1,
         style: const DeluxeBottomBarStyle(
-          backgroundColor: Color.fromARGB(255, 219, 219, 219),
-          bottomPadding: 25,
+          backgroundColor: Colors.white,
+          boxShadow: [
+            BoxShadow(
+              color: Color.fromRGBO(171, 171, 171, .7),
+              blurRadius: 10,
+              offset: Offset(0, 5),
+            ),
+          ],
+        ),
+        buttonStyle: const DeluxeBottomBarButtonStyle(
+          selectedButtonBackgroundColor: Color(0xff0ebe7e),
         ),
         actionButtonStyle: const DeluxeBottomBarActionButtonStyle(
-            backgroundColor: Colors.blue,
-            iconColor: Colors.white,
-            icon: Icons.takeout_dining),
+          backgroundColor: Color(0xff0ebe7e),
+          icon: Icons.accessibility_new_rounded,
+        ),
         items: const [
           DeluxeBottomBarItem(
-            icon: Icons.home,
-            tooltip: 'Home',
+            icon: Icons.home_outlined,
           ),
           DeluxeBottomBarItem(
-            icon: Icons.search,
+            icon: Icons.search_outlined,
             tooltip: 'Search',
           ),
           DeluxeBottomBarItem(
-            icon: Icons.notifications,
-            tooltip: 'Notifications',
-          ),
-          DeluxeBottomBarItem(
-            icon: Icons.settings,
+            icon: Icons.settings_outlined,
             tooltip: 'Settings',
           ),
         ],
