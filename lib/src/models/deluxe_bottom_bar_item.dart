@@ -18,7 +18,7 @@ class DeluxeBottomBarItem {
   ///
   /// This icon visually represents the item, providing quick access to the
   /// function it performs when tapped.
-  final IconData icon;
+  final Widget icon;
 
   /// An optional tooltip that describes the item's purpose.
   ///

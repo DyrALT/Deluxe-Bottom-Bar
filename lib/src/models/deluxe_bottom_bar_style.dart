@@ -10,7 +10,7 @@ class DeluxeBottomBarStyle {
   /// [backgroundColor] sets the background color of the entire bottom bar.
   ///
   /// [bottomPadding] sets the padding at the bottom of the bottom bar.
-  ///   
+  ///
   /// [boxShadow] applies a shadow effect to the action button.
   const DeluxeBottomBarStyle({
     this.backgroundColor,

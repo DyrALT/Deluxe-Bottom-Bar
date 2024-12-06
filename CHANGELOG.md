@@ -23,3 +23,9 @@
 * improve DeluxeBottomBar styles with box shadow effects
 
 * fix tooltop issue
+
+## 1.1.0
+
+* refactor icon handling to use widgets
+
+* enhance DeluxeBottomBar styles

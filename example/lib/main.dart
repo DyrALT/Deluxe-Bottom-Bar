@@ -71,21 +71,39 @@ class _MyHomePageState extends State<MyHomePage> {
         ),
         buttonStyle: const DeluxeBottomBarButtonStyle(
           selectedButtonBackgroundColor: Color(0xff0ebe7e),
+          iconSize: 22,
+          iconColor: Colors.blue,
+          selectedButtonIconColor: Colors.white,
         ),
         actionButtonStyle: const DeluxeBottomBarActionButtonStyle(
           backgroundColor: Color(0xff0ebe7e),
-          icon: Icons.accessibility_new_rounded,
+          widget: Icon(
+            Icons.accessibility_new_rounded,
+            color: Colors.white,
+          ),
         ),
         items: const [
           DeluxeBottomBarItem(
-            icon: Icons.home_outlined,
+            icon: Icon(
+              Icons.home_outlined,
+            ),
           ),
           DeluxeBottomBarItem(
-            icon: Icons.search_outlined,
+            icon: FlutterLogo(
+              size: 20,
+            ),
             tooltip: 'Search',
           ),
           DeluxeBottomBarItem(
-            icon: Icons.settings_outlined,
+            icon: Icon(
+              Icons.settings_outlined,
+            ),
+            tooltip: 'Settings',
+          ),
+          DeluxeBottomBarItem(
+            icon: Icon(
+              Icons.settings_outlined,
+            ),
             tooltip: 'Settings',
           ),
         ],

@@ -10,16 +10,12 @@ class _ActionButton extends StatelessWidget {
   ///
   /// [onActionButtonTapped] is triggered when the button is tapped.
   /// [backgroundColor] sets the button's background color.
-  /// [iconColor] changes the color of the add icon.
-  /// [iconSize] adjusts the size of the add icon.
-  /// [icon] specifies the icon displayed in the action button.
+  /// [widget] specifies the icon displayed in the action button.
   /// [boxShadow] applies a shadow effect to the action button.
   const _ActionButton({
-    required this.iconSize,
-    required this.icon,
+    required this.widget,
     this.onActionButtonTapped,
     this.backgroundColor,
-    this.iconColor,
     this.boxShadow,
   });
 
@@ -34,20 +30,8 @@ class _ActionButton extends StatelessWidget {
   /// If not set, this color defaults to the button's standard color.
   final Color? backgroundColor;
 
-  /// The color of the add icon within the action button.
-  ///
-  /// If not provided, this color defaults to white for visibility.
-  final Color? iconColor;
-
-  /// The size of the icon displayed in the action button.
-  ///
-  /// If not provided, the icon will default to a standard size.
-  final double iconSize;
-
   /// The icon displayed in the action button.
-  ///
-  /// If not provided, the icon will default to the add icon.
-  final IconData icon;
+  final Widget? widget;
 
   /// The shadow effect applied to the action button.
   final List<BoxShadow>? boxShadow;
@@ -64,11 +48,7 @@ class _ActionButton extends StatelessWidget {
           onPressed: () => onActionButtonTapped?.call(),
           elevation: 0,
           backgroundColor: backgroundColor,
-          child: Icon(
-            icon,
-            color: iconColor ?? Colors.white,
-            size: iconSize,
-          ),
+          child: widget,
         ),
       ),
     );

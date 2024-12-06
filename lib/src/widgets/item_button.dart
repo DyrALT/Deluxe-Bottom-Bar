@@ -28,7 +28,7 @@ class _DeluxeBottomBarItemButton extends StatelessWidget {
   final String? tooltip;
 
   /// The icon displayed within the button.
-  final IconData icon;
+  final Widget icon;
 
   /// The size of the icon displayed within the button.
   final double iconSize;
@@ -64,11 +64,18 @@ class _DeluxeBottomBarItemButton extends StatelessWidget {
         ),
         backgroundColor: backgroundColor,
       ),
-      child: Icon(
-        icon,
-        size: iconSize,
-        color: iconColor,
+      child: IconTheme(
+        data: IconThemeData(
+          color: iconColor,
+          size: iconSize,
+        ),
+        child: icon,
       ),
+      // child: Icon(
+      //   icon,
+      //   size: iconSize,
+      //   color: iconColor,
+      // ),
     );
   }
 }
